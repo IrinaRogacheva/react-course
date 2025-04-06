@@ -8,16 +8,18 @@ export const Restaurants = () => {
         restaurants.length > 0 && restaurants[0].id ? restaurants[0].id : null
     );
 
+    const activeRestaurant = restaurants.find(({id}) => id === activeRestaurantId);
+
     return (
         <>
             <TabsList activeId={activeRestaurantId} onClick={setActiveRestaurantId} />
-            <ul>
-                {restaurants.map(({id, name, menu, reviews}) => (
-                    (activeRestaurantId === id) && <li key={id}>
-                        <Restaurant name={name} menu={menu} reviews={reviews} />
-                    </li>
-                ))}
-            </ul>
+            {activeRestaurant && (
+                <Restaurant
+                    name={activeRestaurant.name}
+                    menu={activeRestaurant.menu}
+                    reviews={activeRestaurant.reviews}
+                />
+            )}
         </>
     )
 }

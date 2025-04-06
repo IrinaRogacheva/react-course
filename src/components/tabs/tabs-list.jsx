@@ -5,7 +5,7 @@ export const TabsList = ({activeId, onClick}) => {
     return (
         <ul style={{display: "flex", gap: "20px"}}>
             {restaurants.map(({id, name}) => (
-                <li key={`${id}-tab`}>
+                <li key={id}>
                     <Tab id={id} currentId={activeId} name={name} onClick={onClick} />
                 </li>
             ))}
