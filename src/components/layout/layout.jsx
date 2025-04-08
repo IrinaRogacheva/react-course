@@ -1,13 +1,20 @@
 import {Header} from "../header/header";
 import {Footer} from "../footer/footer";
+import {use} from "react";
+import {ThemeContext} from "../theme-context/index";
+import classNames from "classnames";
 
 import styles from "./layout.module.css";
 
 export const Layout = ({children}) => {
+    const {theme} = use(ThemeContext);
+
     return (
-        <div>
+        <div className={classNames(styles.root, {
+            [styles.dark]: theme === "dark",
+        })}>
             <Header />
-            <section className={styles.root}>{children}</section>
+            <section className={styles.main}>{children}</section>
             <Footer />
         </div>
     )
