@@ -1,0 +1,31 @@
+.root {
+    text-align: center;
+    -webkit-transition: all .2s;
+    transition: all .2s;
+    cursor: pointer;
+}
+
+.default {
+    background-color: #f0ad4e;
+    border: 0;
+    border-radius: 4px;
+    font-size: 14px;
+    line-height: 2;
+    font-weight: 700;
+    color: #ffffff;
+    text-transform: uppercase;
+    padding: 5px 20px;
+    -webkit-transition: all .2s;
+    transition: all .2s;
+    cursor: pointer;
+}
+
+.default:hover {
+    border-color: #ffd25d;
+    opacity: .8;
+}
+
+.dark.default {
+    background-color: black;
+    color: white
+}

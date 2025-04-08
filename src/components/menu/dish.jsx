@@ -1,10 +1,10 @@
 import {DishCounter} from "../dish-counter/dish-counter";
+import {Card} from "../card/card";
 
 export const Dish = ({name}) => {
     return (
-        <>
-            <p>{name}</p>
+        <Card title={name}>
             <DishCounter />
-        </>
+        </Card>
     )
 }

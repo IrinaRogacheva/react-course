@@ -22,41 +22,6 @@ export const Restaurants = () => {
                     reviews={activeRestaurant.reviews}
                 />
             )}
-            {activeRestaurant && (
-                <Restaurant
-                    name={activeRestaurant.name}
-                    menu={activeRestaurant.menu}
-                    reviews={activeRestaurant.reviews}
-                />
-            )}
-            {activeRestaurant && (
-                <Restaurant
-                    name={activeRestaurant.name}
-                    menu={activeRestaurant.menu}
-                    reviews={activeRestaurant.reviews}
-                />
-            )}
-            {activeRestaurant && (
-                <Restaurant
-                    name={activeRestaurant.name}
-                    menu={activeRestaurant.menu}
-                    reviews={activeRestaurant.reviews}
-                />
-            )}
-            {activeRestaurant && (
-                <Restaurant
-                    name={activeRestaurant.name}
-                    menu={activeRestaurant.menu}
-                    reviews={activeRestaurant.reviews}
-                />
-            )}
-            {activeRestaurant && (
-                <Restaurant
-                    name={activeRestaurant.name}
-                    menu={activeRestaurant.menu}
-                    reviews={activeRestaurant.reviews}
-                />
-            )}
         </>
     )
 }

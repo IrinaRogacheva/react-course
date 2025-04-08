@@ -1,5 +1,11 @@
+import {ToggleTheme} from "../toggle-theme/toggle-theme";
+
+import styles from "./header.module.css";
+
 export const Header = () => {
     return (
-        <header>header</header>
+        <header className={styles.root}>
+            <ToggleTheme />
+        </header>
     )
 }
