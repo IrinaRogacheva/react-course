@@ -7,8 +7,8 @@ export const Counter = ({count, increment, decrement}) => {
         <div className={styles.root}>
             <p className={styles.count}>{count}</p>
             <div className={styles.buttonsWrapper}>
-                <Button className={styles.button} onClick={increment}>+</Button>
-                <Button className={styles.button} onClick={decrement}>-</Button>
+                <Button onClick={increment} colorViewVariant={"counter"}>+</Button>
+                <Button onClick={decrement} colorViewVariant={"counter"}>-</Button>
             </div>
         </div>
     )

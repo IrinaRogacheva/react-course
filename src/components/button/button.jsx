@@ -19,6 +19,7 @@ export const Button = ({
             onClick={onClick}
             className={classNames(styles.root, className, {
                 [styles.default]: colorViewVariant === "default",
+                [styles.counter]: colorViewVariant === "counter",
                 [styles.dark]: theme === "dark",
             })}
         >
