@@ -1,26 +1,21 @@
-import {restaurants} from "../../constants/mock";
-import {Restaurant} from "./restaraunt";
 import {TabsList} from "../tabs/tabs-list";
 import {useState} from "react";
 import {ProgressBar} from "../progress-bar/progress-bar";
+import {useSelector} from "react-redux";
+import {selectRestaurantsIds} from "../../redux/entities/restaurant/slice";
+import {RestaurantContainer} from "./restaraunt-container";
 
 export const Restaurants = () => {
-    const [activeRestaurantId, setActiveRestaurantId] = useState(
-        restaurants.length > 0 && restaurants[0].id ? restaurants[0].id : null
-    );
+    const restaurantsIds = useSelector(selectRestaurantsIds);
 
-    const activeRestaurant = restaurants.find(({id}) => id === activeRestaurantId);
+    const [activeRestaurantId, setActiveRestaurantId] = useState(restaurantsIds[0]);
 
     return (
         <>
             <ProgressBar />
             <TabsList activeId={activeRestaurantId} onClick={setActiveRestaurantId} />
-            {activeRestaurant && (
-                <Restaurant
-                    name={activeRestaurant.name}
-                    menu={activeRestaurant.menu}
-                    reviews={activeRestaurant.reviews}
-                />
+            {activeRestaurantId && (
+                <RestaurantContainer id={activeRestaurantId} />
             )}
         </>
     )

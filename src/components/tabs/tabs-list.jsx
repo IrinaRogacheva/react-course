@@ -1,14 +1,18 @@
-import {restaurants} from "../../constants/mock";
-import {Tab} from "./tab";
+import {useSelector} from "react-redux";
+import {selectRestaurantsIds} from "../../redux/entities/restaurant/slice";
+import {TabContainer} from "./tab-container";
 
 import styles from "./tabs-list.module.css";
 
 export const TabsList = ({activeId, onClick}) => {
+    const restaurantsIds = useSelector(selectRestaurantsIds);
+    console.log("restaurantsIds from tabs: ", restaurantsIds)
+
     return (
         <ul className={styles.root}>
-            {restaurants.map(({id, name}) => (
+            {restaurantsIds.map((id) => (
                 <li key={id}>
-                    <Tab id={id} currentId={activeId} name={name} onClick={onClick} />
+                    <TabContainer id={id} currentId={activeId} onClick={onClick} />
                 </li>
             ))}
         </ul>

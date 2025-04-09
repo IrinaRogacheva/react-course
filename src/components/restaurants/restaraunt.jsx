@@ -6,14 +6,14 @@ import {UserContext} from "../user-context/index";
 
 import styles from "./restaraunt.module.css";
 
-export const Restaurant = ({name, menu, reviews}) => {
+export const Restaurant = ({name, menuIds, reviewsIds}) => {
     const { user } = use(UserContext);
 
     return (
         <>
             <h2 className={styles.name}>{name}</h2>
-            {menu.length ? <Menu menu={menu}/> : null}
-            {reviews.length ? <Reviews reviews={reviews}/> : null}
+            {menuIds.length ? <Menu menuIds={menuIds}/> : null}
+            {reviewsIds.length ? <Reviews reviewsIds={reviewsIds}/> : null}
             {user &&
                 <ReviewForm />
             }
