@@ -6,4 +6,5 @@
     border-bottom: 1px solid #e5e5e5;
     display: flex;
     justify-content: flex-end;
+    gap: 10px;
 }
