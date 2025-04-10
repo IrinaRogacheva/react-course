@@ -2,7 +2,7 @@ import {useSelector} from "react-redux";
 import {selectRestaurantById} from "../../redux/entities/restaurant/slice";
 import {Tab} from "./tab";
 
-export const TabContainer = ({id, currentId, onClick}) => {
+export const RestaurantTabContainer = ({id, currentId, onClick}) => {
     const restaurant = useSelector((state) => selectRestaurantById(state, id));
 
     if (!restaurant) {

@@ -1,6 +1,6 @@
 import {useSelector} from "react-redux";
 import {selectRestaurantsIds} from "../../redux/entities/restaurant/slice";
-import {TabContainer} from "./tab-container";
+import {RestaurantTabContainer} from "./restaurant-tab-container.jsx";
 
 import styles from "./tabs-list.module.css";
 
@@ -11,7 +11,7 @@ export const TabsList = ({activeId, onClick}) => {
         <ul className={styles.root}>
             {restaurantsIds.map((id) => (
                 <li key={id}>
-                    <TabContainer id={id} currentId={activeId} onClick={onClick} />
+                    <RestaurantTabContainer id={id} currentId={activeId} onClick={onClick} />
                 </li>
             ))}
         </ul>
