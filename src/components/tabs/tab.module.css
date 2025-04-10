@@ -10,6 +10,7 @@
     position: relative;
     opacity: .8;
     text-transform: none;
+    cursor: pointer;
 }
 
 .active {

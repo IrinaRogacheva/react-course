@@ -1,8 +1,9 @@
 import {useSelector} from "react-redux";
 import {selectRestaurantById} from "../../redux/entities/restaurant/slice";
 import {Tab} from "./tab";
+import {NavLink} from "react-router";
 
-export const RestaurantTabContainer = ({id, currentId, onClick}) => {
+export const RestaurantTabContainer = ({id}) => {
     const restaurant = useSelector((state) => selectRestaurantById(state, id));
 
     if (!restaurant) {
@@ -12,6 +13,10 @@ export const RestaurantTabContainer = ({id, currentId, onClick}) => {
     const {name} = restaurant;
 
     return (
-        <Tab id={id} currentId={currentId} name={name} onClick={onClick} />
+        <NavLink to={id}>
+            {({ isActive }) => (
+                <Tab name={name} isActive={isActive} />
+            )}
+        </NavLink>
     )
 }

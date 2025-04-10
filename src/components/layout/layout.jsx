@@ -6,8 +6,9 @@ import classNames from "classnames";
 import { Cart } from "../cart/cart";
 
 import styles from "./layout.module.css";
+import {Outlet} from "react-router";
 
-export const Layout = ({children}) => {
+export const Layout = () => {
     const {theme} = use(ThemeContext);
 
     return (
@@ -15,7 +16,7 @@ export const Layout = ({children}) => {
             [styles.dark]: theme === "dark",
         })}>
             <Header />
-            <section className={styles.main}>{children}</section>
+            <section className={styles.main}><Outlet/></section>
             <Cart />
             <Footer />
         </div>

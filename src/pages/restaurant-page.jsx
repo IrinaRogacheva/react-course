@@ -1,0 +1,12 @@
+import {useParams} from "react-router";
+import {RestaurantContainer} from "../components/restaurants/restaraunt-container";
+
+export const RestaurantPage = () => {
+    const {restaurantId} = useParams();
+
+    return (
+        <>
+            <RestaurantContainer id={restaurantId} />
+        </>
+    )
+}
