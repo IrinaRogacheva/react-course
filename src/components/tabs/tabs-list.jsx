@@ -6,7 +6,6 @@ import styles from "./tabs-list.module.css";
 
 export const TabsList = ({activeId, onClick}) => {
     const restaurantsIds = useSelector(selectRestaurantsIds);
-    console.log("restaurantsIds from tabs: ", restaurantsIds)
 
     return (
         <ul className={styles.root}>

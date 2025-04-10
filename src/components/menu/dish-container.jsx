@@ -11,5 +11,5 @@ export const DishContainer = ({id}) => {
 
     const {name} = dish;
 
-    return <Dish name={name} />
+    return <Dish id={id} name={name} />
 }
