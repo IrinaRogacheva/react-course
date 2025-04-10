@@ -1,10 +1,16 @@
 import {DishCounter} from "../dish-counter/dish-counter";
+import {Card} from "../card/card";
+import {use} from "react";
+import {UserContext} from "../user-context";
 
 export const Dish = ({name}) => {
+    const { user } = use(UserContext);
+
     return (
-        <>
-            <p>{name}</p>
-            <DishCounter />
-        </>
+        <Card title={name}>
+            {user &&
+                <DishCounter />
+            }
+        </Card>
     )
 }

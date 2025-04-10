@@ -1,3 +1,7 @@
-export const Review = ({text}) => {
-    return text
+import {Card} from "../card/card";
+
+export const Review = ({text, user}) => {
+    return <Card title={user}>
+        {text}
+    </Card>
 }

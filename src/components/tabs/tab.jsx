@@ -1,3 +1,7 @@
+import classNames from "classnames";
+
+import styles from "./tab.module.css";
+
 export const Tab = ({id, currentId, name, onClick}) => {
     return (
         <button
@@ -6,7 +10,9 @@ export const Tab = ({id, currentId, name, onClick}) => {
                     onClick(id)
                 }
             }}
-            style={(currentId === id) ? {background: "bisque"} : {}}
+            className={classNames(styles.root, {
+                [styles.active]: currentId === id,
+            })}
         >
             {name}
         </button>

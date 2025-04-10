@@ -1,5 +1,13 @@
+import {ToggleTheme} from "../toggle-theme/toggle-theme";
+import {UserMenu} from "../user-menu/user-menu";
+
+import styles from "./header.module.css";
+
 export const Header = () => {
     return (
-        <header>header</header>
+        <header className={styles.root}>
+            <ToggleTheme />
+            <UserMenu />
+        </header>
     )
 }

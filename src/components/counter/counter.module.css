@@ -1,0 +1,21 @@
+.root {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: fit-content;
+}
+
+.count {
+    font-family: Arial, sans-serif;
+    color: #898989;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 28px;
+    text-align: center;
+    margin: 0 0 5px;
+}
+
+.buttonsWrapper {
+    display: flex;
+    gap: 5px;
+}

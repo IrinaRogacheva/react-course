@@ -1,0 +1,38 @@
+.root {
+    text-align: center;
+    -webkit-transition: all .2s;
+    transition: all .2s;
+    cursor: pointer;
+}
+
+.default,
+.counter {
+    background-color: #f0ad4e;
+    border: 0;
+    border-radius: 4px;
+    line-height: 2;
+    font-weight: 700;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+.default:hover,
+.counter:hover {
+    border-color: #ffd25d;
+    opacity: .8;
+}
+
+.default {
+    font-size: 14px;
+    padding: 5px 20px;
+}
+
+.dark.default {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.counter {
+    font-size: 20px;
+    padding: 0 17px;
+}

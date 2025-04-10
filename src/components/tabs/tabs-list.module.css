@@ -1,0 +1,7 @@
+.root {
+    display: flex;
+    gap: 20px;
+    padding: 0 15px;
+    background: #e5e5e5;
+    cursor: pointer;
+}
