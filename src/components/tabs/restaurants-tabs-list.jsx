@@ -2,9 +2,9 @@ import {useSelector} from "react-redux";
 import {selectRestaurantsIds} from "../../redux/entities/restaurant/slice";
 import {RestaurantTabContainer} from "./restaurant-tab-container.jsx";
 
-import styles from "./tabs-list.module.css";
+import styles from "./restaraunts-tabs-list.module.css";
 
-export const TabsList = () => {
+export const RestaurantsTabsList = () => {
     const restaurantsIds = useSelector(selectRestaurantsIds);
 
     return (

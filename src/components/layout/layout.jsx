@@ -4,9 +4,9 @@ import {use} from "react";
 import {ThemeContext} from "../theme-context/index";
 import classNames from "classnames";
 import { Cart } from "../cart/cart";
+import {Outlet} from "react-router";
 
 import styles from "./layout.module.css";
-import {Outlet} from "react-router";
 
 export const Layout = () => {
     const {theme} = use(ThemeContext);

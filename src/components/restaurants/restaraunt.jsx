@@ -1,22 +1,14 @@
-import {Reviews} from "../reviews/reviews";
-import {Menu} from "../menu/menu";
-import {ReviewForm} from "../review-form/review-form";
-import {use} from "react";
-import {UserContext} from "../user-context/index";
+import {Outlet} from "react-router";
+import {RestaurantNavTabs} from "../tabs/restaurant-nav-tabs";
 
 import styles from "./restaraunt.module.css";
 
-export const Restaurant = ({name, menuIds, reviewsIds}) => {
-    const { user } = use(UserContext);
-
+export const Restaurant = ({name}) => {
     return (
         <>
             <h2 className={styles.name}>{name}</h2>
-            {menuIds.length ? <Menu menuIds={menuIds}/> : null}
-            {reviewsIds.length ? <Reviews reviewsIds={reviewsIds}/> : null}
-            {user &&
-                <ReviewForm />
-            }
+            <RestaurantNavTabs />
+            <Outlet />
         </>
     )
 }
