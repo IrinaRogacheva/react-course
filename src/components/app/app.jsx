@@ -29,9 +29,7 @@ export const App = () => {
                                         <Route path="reviews" element={<RestaurantReviewsPage/>}/>
                                     </Route>
                                 </Route>
-                                <Route path="/dish" element={<DishPage />}>
-                                    <Route path=":dishId" element={<DishPage />}/>
-                                </Route>
+                                <Route path="/dish/:dishId" element={<DishPage />}/>
                             </Route>
                             <Route path="*" element={<Navigate to="/" />} />
                         </Routes>

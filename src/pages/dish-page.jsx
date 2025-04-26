@@ -4,9 +4,5 @@ import {DishContainer} from "../components/menu/dish-container";
 export const DishPage = () => {
     const {dishId} = useParams();
 
-    return (
-        <>
-            <DishContainer id={dishId} />
-        </>
-    )
+    return <DishContainer id={dishId} />
 }
