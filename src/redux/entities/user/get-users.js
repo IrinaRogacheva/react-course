@@ -16,8 +16,6 @@ export const getUsers = createAsyncThunk(
     },
     {
         condition: (_, {getState}) => {
-            console.log("!selectUsersTotal(getState()): ",!selectUsersTotal(getState()))
-            console.log("selectUsersTotal(getState()): ",selectUsersTotal(getState()))
             return !selectUsersTotal(getState());
         },
     }
