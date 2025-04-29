@@ -7,7 +7,7 @@ export const Dish = ({id, name}) => {
     const { user } = use(UserContext);
 
     return (
-        <Card title={name}>
+        <Card title={name} link={`/dish/${id}`}>
             {user &&
                 <DishCounter id={id}/>
             }
